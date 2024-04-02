@@ -1,0 +1,71 @@
+.card {
+  gap: 12px;
+  border-bottom: 1px solid #BCBCBD;
+  padding: 16px 0;
+  margin-bottom: 16px;
+  justify-content: center;
+  min-height: 120px;
+  &__image {
+    width: 30%;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+  }
+  &__detail {
+    width: 70%;
+    position: relative;
+    &__boxes {
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      &--title {
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      &--product-type-online {
+        background-color: #EDFCF3;
+        padding: 3px 12px;
+        border-radius: 4px;
+        color: #01602E;
+        line-height: 24px;
+      }
+      &--product-type-offline {
+        background-color: #FEE1E2;
+        padding: 3px 12px;
+        border-radius: 4px;
+        color: #9F0404;
+        line-height: 24px;
+      }
+      &--partner {
+        color: #959FAA;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      &--basic-price {
+        font-size: 12px;
+        margin-right: 8px;
+        font-weight: 600;
+      }
+      &--promo {
+        padding: 3px 10px;
+        background: #FFECAC;
+        border-radius: 4px;
+        color: #874800;
+        line-height: 24px;
+        font-size: 12px;
+      }
+      &--price {
+        line-height: 28px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="product-list fixed-alignment">
+  <div class="outer-section d-flex">
+    <div class="outer-section__filter">
+      <app-product-filter></app-product-filter>
+    </div>
+    <div class="outer-section__content">
+      <h1>100 Best Course</h1>
+      @defer(when productLists.length > 0) {
+        @for(product of productLists; track product.courseId) {
+          <app-card [product]="product"></app-card>
+        }
+      } @placeholder() {
+        <p>loading data...</p>
+      } @error {
+        <p>error loading components</p>
+      }
+    </div>
+  </div>
+</div>

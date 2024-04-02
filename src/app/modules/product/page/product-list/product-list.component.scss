@@ -1,0 +1,12 @@
+.product-list {
+  .outer-section {
+    gap: 20px;
+    
+    &__filter {
+      width: 30%;
+    }
+    &__content {
+      width: 70%;
+    }
+  }
+}

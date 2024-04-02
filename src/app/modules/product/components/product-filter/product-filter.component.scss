@@ -1,0 +1,24 @@
+.product-filter {
+  &__title {
+    p {
+      padding-left: 10px;
+    }
+  }
+  .filter-category {
+    &__category {
+      margin-bottom: 12px;
+    }
+    &__label {
+      margin-bottom: 8px;
+      margin-top: 0;
+      cursor: pointer;
+    }
+    &__label:hover,
+    &__active {
+      background-color: #DDDDEA;
+      border-radius: 4px;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+}

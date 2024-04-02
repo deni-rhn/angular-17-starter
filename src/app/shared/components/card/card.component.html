@@ -1,0 +1,26 @@
+<div class="card d-flex">
+  <div class="card__image">
+    <img [src]="product.icon.large" alt="Angular">
+  </div>
+  <div class="card__detail">
+    <div class="card__detail__boxes">
+      <p class="card__detail__boxes--title m-0">{{product.courseName}}</p>
+      @switch(product.courseType) {
+        @case("ONLINE") {
+          <label class="card__detail__boxes--product-type-online m-0">{{product.courseType}}</label>
+        }
+        @case("OFFLINE") {
+          <label class="card__detail__boxes--product-type-offline m-0">{{product.courseType}}</label>
+        }
+      }
+      @if(product.partner) {
+        <p class="card__detail__boxes--partner m-0">{{product.partner.partnerName}}</p>
+      }
+      @if(product.promoText !== null) {
+        <label class="card__detail__boxes--basic-price">{{product.basicPrice | currency : 'IDR'}}</label>
+        <label class="card__detail__boxes--promo m-0">{{product.promoText}}</label>
+      }
+      <p class="card__detail__boxes--price m-0">{{product.finalPrice | showPrice}}</p>
+    </div>
+  </div>
+</div>

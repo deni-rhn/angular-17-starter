@@ -1,0 +1,19 @@
+<div class="product-filter">
+  <div class="product-filter__title d-flex">
+    <app-filter-icon></app-filter-icon>
+    <p class="m-0">Filter</p>
+  </div>
+  <div class="product-filter__item filter-category">
+    <p class="filter-category__category">Kategori</p>
+    @defer(when filterData){
+      @for(filter of filterData; track filter.categoriesId) {
+        <p class="filter-category__label" (click)="onChangeCategory(filter.categoriesId)"
+          [class.filter-category__active]="filter.categoriesId === selectedCategory">{{filter.categoryName}}</p>
+      }
+    } @placeholder() {
+      <p>loading data...</p>
+    } @error {
+      <p>error loading component</p>
+    }
+  </div>
+</div>
